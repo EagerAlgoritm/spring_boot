@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Save User</title>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h3>User Directory</h3>
+    <hr>
+    <p class="h4 mb-4">Save user</p>
+    <form action="#" th:action="@{/admin/saveUser}" th:object="${user}" method="POST">
+
+        <input type="hidden" th:field="*{id}" />
+
+        <input type="text" th:field="*{name}"
+               class="form-control mb-4 col-4" placeholder="First name">
+
+        <input type="text" th:field="*{lastName}"
+               class="form-control mb-4 col-4" placeholder="Last name">
+
+        <input type="text" th:field="*{age}"
+               class="form-control mb-4 col-4" placeholder="Age">
+
+        <input type="text" th:field="*{hobby}"
+               class="form-control mb-4 col-4" placeholder="Hobby">
+
+        <input type="text" th:field="*{username}"
+               class="form-control mb-4 col-4" placeholder="Username">
+
+        <input type="text" th:field="*{password}"
+               class="form-control mb-4 col-4" placeholder="Password">
+        <button type="submit" class="btn btn-info col-2">Save</button>
+
+    </form>
+
+    <hr>
+    <a th:href="@{/admin/getAll}"
+       class="btn btn-info btn-sm">
+        Back to User List
+    </a>
+    <br><br>
+    <a th:href="@{/logout}"
+       class="btn btn-primary btn-sm mb-3">
+        Logout
+    </a>
+</div>
+</body>
+
+</html>

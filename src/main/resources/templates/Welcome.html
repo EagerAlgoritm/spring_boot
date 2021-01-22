@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Save User</title>
+</head>
+<body>
+
+<h2>Hello user, welcome to home page!</h2>
+<br>
+
+<a th:href="@{/admin/getAll}"
+   class="btn btn-info btn-sm">
+    to User List
+</a>
+    <br><br>
+<a th:href="@{/user}"
+   class="btn btn-info btn-sm">
+    to User Info
+</a>
+<hr>
+<a th:href="@{/login}"
+   class="btn btn-primary btn-sm mb-3">
+    Logout
+</a>
+
+<a th:href="@{/logout}"
+   class="btn btn-primary btn-sm mb-3">
+    Logout
+</a>
+</body>
+</html>

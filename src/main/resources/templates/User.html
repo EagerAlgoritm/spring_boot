@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <title>Save User</title>
+    <title>User information</title>
+</head>
+<body>
+
+<h2>Hello,
+    <th th:text=" ${user.name}"></th>
+</h2>
+<h3>
+    Your account information
+</h3>
+<table class="table table-bordered table-striped">
+<thead class="thead-dark">
+
+    <tr>
+        <td>User Id:</td>
+        <th th:text="${user.id}"></th>
+
+        <td>User Name:</td>
+        <th th:text="${user.name}"></th>
+
+        <td>User LastName:</td>
+        <th th:text="${user.lastName}"></th>
+
+        <td>User Age:</td>
+        <th th:text="${user.age}"></th>
+
+        <td>User Hobby:</td>
+        <th th:text="${user.hobby}"></th>
+
+        <td>User Username:</td>
+        <th th:text="${user.username}"></th>
+
+        <td>User Password:</td>
+        <th th:text="${user.password}"></th>
+    </tr>
+</table>
+<br>
+<a th:href="@{/logout}"
+   class="btn btn-primary btn-sm mb-3">
+    Logout
+</a>
+
+
+</body>
+</html>
